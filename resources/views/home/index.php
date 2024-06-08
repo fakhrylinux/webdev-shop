@@ -36,20 +36,26 @@
     </nav>
     <main class="container">
         <div class="grid gap-3 row justify-content-center">
-            <?php if($produk): ?>
-                <?php foreach($produk as $item): ?>
-                    <div class="col-sm-3 mb-3 mb-sm-0">
-                        <div class="card" style="width: 18rem;">
-                            <img src="<?= $item->gambar; ?>" class="card-img-top object-fit-cover" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $item->nama_produk; ?></h5>
-                                <p class="card-text"><?= $item->deskripsi; ?></p>
-                                <a href="#" class="btn btn-primary"><?= $item->harga; ?></a>
-                            </div>
-                        </div>
+            <div class="col-sm-3 mb-3 mb-sm-0">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://balifoodstore.com/18-large_default/broccoli-.jpg" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Brokoli 500gram</h5>
+                        <p class="card-text">oleh petani terpercaya</p>
+                        <a href="#" class="btn btn-primary">10.000</a>
                     </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                </div>
+            </div>
+            <div class="col-sm-3 mb-3 mb-sm-0">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://balifoodstore.com/10-large_default/wortel-500gr.jpg" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Wortel 500gram</h5>
+                        <p class="card-text">oleh petani terpercaya</p>
+                        <a href="#" class="btn btn-primary">17.000</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="text-center">&copy; <?= date("Y"); ?> by Hannan</footer>
