@@ -34,8 +34,8 @@
             </div>
         </div>
     </nav>
-    <main class="container">
-        <div class="grid gap-3 row justify-content-center">
+    <main class="container my-3">
+        <div class="grid gap-3 gap-row-3 row justify-content-center">
             <div class="col-sm-3 mb-3 mb-sm-0">
                 <div class="card" style="width: 18rem;">
                     <img src="https://balifoodstore.com/18-large_default/broccoli-.jpg" class="card-img-top object-fit-cover" alt="...">
