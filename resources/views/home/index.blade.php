@@ -29,7 +29,18 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">Features</a>
                 <a class="nav-link" href="#">Pricing</a>
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                {{-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> --}}
+                @guest
+                    <a class="nav-link" href="{{route('login')}}">Login</a>
+                    <a class="nav-link" href="{{route('register')}}">Register</a>
+                    @else
+                    <form action="{{ route('logout')}}" id="logout" method="POST">
+                        @csrf
+                        <a role="button" class="nav-link active"
+                        onclick="document.getElementById('logout').submit();"
+                        >Logout</a>
+                    </form>
+                @endguest
             </div>
             </div>
         </div>
