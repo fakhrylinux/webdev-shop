@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\ProductController::class, 'index']);
-Auth::routes();
+Route::get('/products/{id}', [\App\Http\Controllers\ProductController::class, 'show'])->name('product.show');
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Route::get('/cart', 'App \ Http \ Controllers \ CartController@index')->name("cart.index");
+//Route::get('/cart/delete', 'App \ Http \ Controllers \ CartController@delete')->name("cart.delete");
+//Route::post('/cart/add/{id}', 'App \ Http \ Controllers \ CartController@add')->name("cart.add");
+
+Route::get('/cart', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+Route::get('/cart/delete', [\App\Http\Controllers\CartController::class, 'delete'])->name('cart.delete');
+Route::post('/cart/add/{id}', [\App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
+
+Auth::routes();

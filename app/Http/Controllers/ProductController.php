@@ -13,6 +13,16 @@ class ProductController extends Controller
         $products = Product::all();
         $viewData["products"] = $products;
 //dd($viewData);
-        return view('home.index')->with("viewData", $viewData);
+        return view('product.index')->with("viewData", $viewData);
+    }
+
+    public function show($id)
+    {
+        $viewData = [];
+        $product = Product::findOrFail($id);
+        $viewData["title"] = $product['name'] . " - Online Store";
+        $viewData["subtitle"] = $product['name'] . " - Product information";
+        $viewData["product"] = $product;
+        return view('product.show')->with("viewData", $viewData);
     }
 }
